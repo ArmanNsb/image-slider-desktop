@@ -1,0 +1,52 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 1880px;
+  height: 3188px;
+  overflow: auto;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.before,
+.after {
+  position: absolute;
+  top: 35.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.after {
+  clip: rect(0, 1080px, 3188px, 540px); /* Initial clip to show half */
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #000;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  z-index: 10;
+}
